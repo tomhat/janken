@@ -8,6 +8,18 @@
 <![endif]-->
 <style type="text/css">  
 <!--
+(function(w,d){
+	let $ = w.jQuery;
+	w.addEventListener('DOMContentLoaded',function(){
+		d.getElementById('button_start').addEventListener('click',function(e){
+			//TODO: Stage Game
+		});
+		d.getElementById('button_start').addEventListener('click',function(e){
+			//TODO: Stage Game
+		});
+	});
+
+})(window,document);
 -->
 </style>
 <style type="text/css" ""></style>
@@ -15,5 +27,35 @@
 <title>JanKen Game</title>
 </head>
 <body>
+	<h1>じゃんけんゲーム</h1>
+	<div id="view_menu">
+		<div>
+			<p>これまでの戦績「<span id="num_win">0</span>勝<span id="num_lose">0</span>負」</p>
+			<p>最高連勝記録「<span id="num_continue_win">0</span>連勝」</p>
+			<button id="button_start">ゲームスタート</button>
+		</div>
+	</div>
+	<div id="view_game">
+		<div>
+			<p id="msg_ready">じゃんけん…</p>
+			<p id="msg_win">ぽん！あなたの勝ちです</p>
+			<p id="msg_lose">ぽん！あなたの負けです</p>
+			<p id="msg_draw">ぽん！あいこで…</p>
+			<fieldset>
+			<legend>相手</legend>
+			<button id="button_cpu_gu" disabled><img src="./assets/gu.png" alt="グー" /></button>
+			<button id="button_cpu_choki" disabled><img src="./assets/choki.png" alt="チョキ" /></button>
+			<button id="button_cpu_pa" disabled><img src="./assets/pa.png" alt="パー" /></button>
+			</fieldset>
+			<fieldset>
+			<legend>あなた</legend>
+			<button id="button_your_gu"><img src="./assets/gu.png" alt="グー" /></button>
+			<button id="button_your_choki"><img src="./assets/choki.png" alt="チョキ" /></button>
+			<button id="button_your_pa"><img src="./assets/pa.png" alt="パー" /></button>
+			<p>選んでください</p>
+			</fieldset>
+			<p id="msg_continue_win"><span>0<span>連勝中</p>
+		</div>
+	</div>
 </body>
 </html>
