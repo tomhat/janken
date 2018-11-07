@@ -1,0 +1,2 @@
+# janken
+Sample Janken Game
